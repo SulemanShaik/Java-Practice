@@ -1,0 +1,51 @@
+
+
+
+Polymorphism - Same name +multiple form
+   (action/behavior)
+   
+   
+   Types of Poly:
+   
+  1. Compile time  /early binding / static binding / overloading
+  
+     
+     Same method name and different signature
+     In same class we have multiple methods with same name but different method signature
+     
+  Interview Question:
+  	
+  	*can we achieve overloading by keeping the method signature same 
+  	and changing the return type?
+  	Ans:No
+  
+  
+  
+  
+   
+  2. Runtime time  /late binding / dynamic binding / overriding
+
+  different classes (with inheritance applied) we have methods with same signature
+
+
+
+  Interview Question:
+  	
+  	*can we return type while performing overriding?
+  	
+  	Ans:No - When the return type is primitive 
+  	    yes - in case the return types are className
+
+ early binding
+ late binding
+ static binding
+ overloading
+ overriding
+
+
+
+
+
+
+
+

@@ -1,0 +1,184 @@
+STRINGS:
+--------
+
+
+     Java String
+ In Java, string is basically an object that represents sequence of char values.
+ An array of characters works same as Java string. For example:
+
+char[] ch={'j','a','v','a','t','p','o','i','n','t'};  
+String s=new String(ch); 
+ 
+is same as:
+
+String s="javatpoint";  
+
+
+The java.lang.String class implements Serializable, Comparable and CharSequence interfaces.
+
+
+Serializable      comparable       CharSequence
+     |                |               |
+     |                |               |
+     |                |               |  implements
+     |                |               |
+     |                |               |
+     
+     --|-----------String--------------|-----------
+     
+     
+     CharSequence Interface
+     
+The CharSequence interface is used to represent the sequence of characters.
+ String, StringBuffer and StringBuilder classes implement it.
+  It means, we can create strings in java by using these three classes.
+  
+                             CharSequence
+                                   |
+                                   |
+                                   |
+                                   |
+                                   |
+                                   
+               String         StringBuffer        StringBuilder(implements)
+               
+               
+               
+               
+ The Java String is immutable which means it cannot be changed.
+ Whenever we change any string, a new instance is created. 
+ For mutable strings, you can use StringBuffer and StringBuilder classes.
+ 
+ 
+ 
+ 
+ 
+ What is String in java
+Generally, String is a sequence of characters. But in Java, string is an object
+ that represents a sequence of characters.
+  The java.lang.String class is used to create a string object.
+
+How to create a string object?
+There are two ways to create String object:
+
+By string literal
+By new keyword
+                    1) String Literal
+Java String literal is created by using double quotes. For Example:
+
+String s="welcome";  
+Each time you create a string literal, the JVM checks the "string constant pool" first. 
+If the string already exists in the pool, a reference to the pooled instance is returned.
+ If the string doesn't exist in the pool, a new string instance is created 
+ and placed in the pool. For example:
+
+String s1="Welcome";  
+String s2="Welcome";//It doesn't create a new instance  
+
+Why Java uses the concept of String literal?
+To make Java more memory efficient (because no new objects are created
+ if it exists already in the string constant pool).
+ 
+                      2) By new keyword
+String s=new String("Welcome");//creates two objects and one reference variable  
+In such case, JVM will create a new string object in normal (non-pool) heap memory, 
+and the literal "Welcome" will be placed in the string constant pool.
+ The variable s will refer to the object in a heap (non-pool).
+
+                       String Immutable
+                      ------------------
+                      
+ 
+ Immutable String in Java
+ In java, string objects are immutable. Immutable simply means unmodifiable or unchangeable.
+
+ Once string object is created its data or state can't be changed
+ but a new string object is created.
+ 
+ class Testimmutablestring{  
+ public static void main(String args[]){  
+   String s="Suleman";  
+   s.concat(" Shaik");//concat() method appends the string at the end  
+   System.out.println(s);//will print Suleman because strings are immutable objects  
+ }  
+}  
+
+Output:Suleman
+
+ 
+Here Suleman is not changed but a new object is created with sulemanshaik
+ That is why string is known as immutable.
+ 
+ class Testimmutablestring1{  
+ public static void main(String args[]){  
+   String s="Suleman";  
+   s=s.concat(" Shaik");  
+   System.out.println(s);  
+ }  
+}  
+ 
+ 
+ Output:Suleman Shaik
+In such case, s points to the "Suleman Shaik". 
+Please notice that still suleman object is not modified.
+
+
+
+Why string objects are immutable in java?
+Because java uses the concept of string literal.Suppose there are 5 reference variables,
+all referes to one object "sachin".If one reference variable changes the value of the object,
+ it will be affected to all the reference variables.
+  That is why string objects are immutable in java.
+ 
+
+
+
+
+
+String Buffer: -
+-------------
+
+As we know that string is immutable class. To overcome this problem,
+ we have String Buffer class in Java
+
+public class Example3 {
+           
+            public static void main(String[] args) {
+                        StringBuffer sb = new StringBuffer("Bhanu");
+                        sb.append("Test");
+                        System.out.println(sb);
+                       
+            }          
+}
+
+Output: - BhanuTest
+
+String builder: -
+-------------
+
+
+The only difference between string buffer and string builder is,
+ String builder is thread safe. Which means when multiple thread access String build data, 
+ data corruption will not happen
+
+public class Example3 {
+           
+            public static void main(String[] args) {
+                        StringBuilder sb = new StringBuilder("Bhanu");
+                        sb.append("Test");
+                        System.out.println(sb);
+                       
+            }          
+}
+ Output: - BhanuTest 
+     
+     
+     
+     
+
+
+
+
+
+
+

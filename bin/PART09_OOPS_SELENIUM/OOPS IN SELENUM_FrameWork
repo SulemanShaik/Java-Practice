@@ -1,0 +1,97 @@
+In almost all of the Automation interview you may have face this question where you have actually used OOPS Concept in your Automation framework.
+So In this blog, we will discuss how and where we have actually applied below OOPs concepts in our Automation Framework.
+
+        INTERFACE
+        ABSTRACTION
+        INHERITANCE
+       ENCAPSULATION
+        METHOD OVERLOADING
+        METHOD OVERRIDING
+
+INTERFACE:
+---------
+
+An interface in the Java programming language is an abstract type that
+ is used to specify a behavior that classes must implement. 
+ An interface also contain methods and variables just like the class
+  but the methods declared in interface are by default abstract.
+
+To understand this the very basic statement we write in Selenium
+WebDriver driver = new Chromedriver();
+
+In this Case WebDriver itself is an Interface. So based on this statement, 
+WebDriver driver = new Chromedriver(); 
+
+we are initializing chrome browser using Selenium WebDriver. 
+It means we are creating a reference variable (driver) of the interface (WebDriver) 
+and creating an Object. Here WebDriver is an Interface as mentioned earlier 
+and Chromedriver is a class.
+
+
+
+ 
+
+ABSTRACTION:
+-----------
+
+As we are aware, Abstraction is a process of hiding the implementation details
+ from the user and showing only relevant details to them. 
+ It also helps to reduce programming complexity and effort.
+
+In our Automation Framework whenever we Use Page object Model,
+ we write all the locator in page class and use this locator in our test it means
+  we are hiding our implementation from the user this is the simple example of using 
+ abstraction in framework.
+
+
+INHERITANCE:
+-----------
+
+The process by which one class acquires the properties (instance variables) and
+ functionalities of another class is called inheritance.
+
+When We create a Base Class in our automation Framework to initialize WebDriver interface, 
+waits,loggers,reports etc. and when we extend this Base Class in other classes
+ such as Tests and Utility Class. In this case extending one class into other class 
+ is example of implementing Inheritance.
+
+
+ENCAPSULATION:
+-------------
+
+Encapsulation is a mechanism of wrapping data (variables) and code together as a single unit.
+All the classes which we write in our automation framework are an example of Encapsulation. 
+
+For e.g In Page object model classes, in which we declare the WebElement locator using
+ @FindBy and initialization of this data members will be done using Constructor to 
+ utilize those in test methods.
+
+
+
+
+ 
+METHOD OVERLOADING:
+------------------
+
+If a class has multiple methods having same name but different in parameters, 
+it is known as Method Overloading.
+
+In Implicit wait when we use different time stamps such as SECONDS, MINUTES, HOURS etc
+ is one of the possible example of method overloading.
+
+
+METHOD OVERRIDING:
+-----------------
+
+If subclass or child class has the same method as declared in the parent class,
+ it is known as method overriding in Java. 
+
+Whenever we use a method which was already implemented/written in another class 
+by changing its parameters this is the example of method overriding.
+
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+
+	Types of inheritance:
+	====================
+	
+	Single 
+	Multiple
+	Multilevel
+	Hybrid
+	Hierarchical
+	
+	
+	Class--->class /interface -->interface-->extends
+	Class--->interface -->interface
+	
+	class level:
+	------------
+	
+	Single
+	Multilevel
+	Hierarchical
+	
+	
+	interface level:
+	--------------
+	
+	Single
+	Multilevel
+	Hierarchical
+	Multiple
+	
+	
+	Interview Question:
+	
+	java doesn't support Multiple inheritance 
+	
+	 Consider a scenario where A, B, and C are three classes.
+	 The C class inherits A and B classes. If A and B classes have the same method 
+	 and you call it from child class object, there will be 
+	  to call the method of A or B class.
+	
+	
+	
+	Example:
+	--------
+	class A{  
+      void msg(){System.out.println("Hello");}  
+       }  
+         class B{  
+       void msg(){System.out.println("Welcome");}  
+          }  
+        class C extends A,B{//suppose if it were  
+   
+         public static void main(String args[]){  
+           C obj=new C();  
+              obj.msg();//Now which msg() method would be invoked?  
+}  
+}  
+
+	
+	
+	 Compile Time Error
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
