@@ -1,4 +1,4 @@
-package com.qa.singletonclass;
+package com.qa.singletonclassconcept;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
